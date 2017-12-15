@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: local("Brandon Grotesque Bold"), local("BrandonGrotesque-Bold"), url("fonts/BrandonGrotesque-Bold.woff2") format("woff2"), url("fonts/BrandonGrotesque-Bold.woff") format("woff"), url("fonts/BrandonGrotesque-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
 BODY {
   margin: 0;
   padding: 0;
@@ -18,16 +23,24 @@ MAIN {
   width: 100%;
   height: 100%;
   background-size: cover;
-  text-align: center; }
+  text-align: center;
+  color: #244289; }
   .oui__close {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: red;
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 20; }
+    z-index: 20;
+    color: #244289;
+    cursor: pointer;
+    stroke: currentColor;
+    stroke-width: 0px;
+    transition: transform .5s ease-out, stroke-width .5s ease-out; }
+    .oui__close:hover {
+      transform: scale(1.1);
+      stroke-width: 50px; }
   .oui__img-box {
     position: relative;
     display: inline-block;
@@ -35,6 +48,23 @@ MAIN {
     width: 100%;
     height: 100%;
     opacity: 0; }
+  .oui__button {
+    font-family: 'Brandon Grotesque';
+    font-weight: bold;
+    display: inline-block;
+    margin: 60px auto 0 auto;
+    border: .1em solid #1a4289;
+    border-radius: .2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .4em 1.5em;
+    font-size: 3vmin;
+    color: #1a4289;
+    cursor: pointer;
+    transition: background-color .5s ease-out, color .5s ease-out; }
+    .oui__button:hover {
+      background-color: #1a4289;
+      color: #fff; }
   .oui__img {
     position: absolute;
     margin: auto;
@@ -59,6 +89,104 @@ MAIN {
       background-image: url("images/spoon-half.png"); }
     .oui__img-bg {
       background-image: url("images/bg.jpg");
-      background-color: #e0ddd9;
+      background-color: #ebebeb;
       opacity: 0;
       z-index: 1; }
+    .oui__img-bg-white {
+      background-image: url("images/bg-white.jpg");
+      background-color: #ebebeb;
+      opacity: 0;
+      z-index: 1; }
+    .oui__img-logo, .oui__img-title {
+      position: static;
+      display: block;
+      margin: auto; }
+    .oui__img-new-text {
+      background-image: url("images/new-text.svg");
+      width: 22vmin;
+      height: 22vmin;
+      left: auto;
+      right: 50%;
+      margin: 0 40vmin 0 0;
+      opacity: 0;
+      z-index: 1; }
+    .oui__img-logo {
+      background-image: url("images/logo.svg");
+      width: 44vmin;
+      height: 23vmin;
+      margin-bottom: 3vmin; }
+    .oui__img-title {
+      background-image: url("images/title.svg");
+      width: 30vmin;
+      height: 9vmin; }
+  .oui__right-texts {
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: 20vmin;
+    text-align: center;
+    opacity: 0;
+    z-index: 4; }
+  .oui__right-texts, .oui__img-new-text {
+    top: 10vmin; }
+  .oui__tastes-box {
+    display: block;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 3vmin 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 4;
+    text-align: center;
+    white-space: nowrap; }
+  .oui__tastes-items-box {
+    display: block;
+    margin: auto;
+    width: 100%;
+    margin: 0;
+    padding: 2vmin 0 3vmin 0;
+    text-align: center;
+    white-space: nowrap; }
+  .oui__tastes-label {
+    display: block;
+    font-family: 'Brandon Grotesque';
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #244289;
+    font-size: 2vmin; }
+  .oui__taste {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .5s ease-out;
+    border-radius: 40%; }
+    .oui__taste-label {
+      opacity: 0;
+      font-family: 'Brandon Grotesque';
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #244289;
+      transition: opacity .5s ease-out, box-shadow .5s ease-out; }
+    .oui__taste-img {
+      width: 9vw; }
+    .oui__taste:hover {
+      transform: scale(1.3);
+      box-shadow: inset 0px 0 0 100px rgba(247, 244, 247, 0.4), 0px 0 10px 3px rgba(247, 244, 247, 0.4); }
+      .oui__taste:hover .oui__taste-label {
+        opacity: 1; }
+  .oui__remark {
+    display: block;
+    position: absolute;
+    right: -29vmin;
+    bottom: 2vmin;
+    z-index: 3;
+    background-image: url("images/remark.svg");
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    width: 29vmin;
+    height: 6vmin;
+    margin: 0; }

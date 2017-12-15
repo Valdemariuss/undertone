@@ -40,6 +40,11 @@ gulp.task('images', function() {
 	.pipe(gulp.dest('./build/images'));
 });
 
+gulp.task('fonts', function() {
+	gulp.src('./src/static/fonts/*')
+	.pipe(gulp.dest('./build/fonts'));
+});
+
 gulp.task('http-server', function() {
 	connect()
 	.use(require('connect-livereload')())
@@ -53,6 +58,7 @@ gulp.task('default', function() {
 	gulp.run('scss');
 	gulp.run('js');
 	gulp.run('images');
+	gulp.run('fonts');	
 	livereload.listen();
 	gulp.watch('src/templates/*.jade', ['jade']);
 	gulp.watch('src/static/scss/*.scss', ['scss']);
